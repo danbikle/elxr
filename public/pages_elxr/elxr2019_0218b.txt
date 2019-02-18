@@ -65,10 +65,13 @@ messages between different machines on the same network is handled
 transparently by the VM, making it a perfect environment for building
 distributed software!
 
-However, I felt there was
-still a gap in the Erlang ecosystem. I missedfirst-class support for
-some of the features I find necessary in mydaily work—things such as
-metaprogramming, polymorphism, andfirst-class tooling. From this need,
+However, I felt there was still a gap in the Erlang ecosystem.
+
+I missed first-class support for some of the features I find necessary
+in my daily work—things such as meta programming, polymorphism, and
+first-class tooling.
+
+From this need,
 Elixir was born.Elixir is a pragmatic approach to functional
 programming. It valuesits functional foundations and it focuses on
 developerproductivity. Concurrency is the backbone of Elixir

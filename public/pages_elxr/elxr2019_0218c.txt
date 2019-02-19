@@ -112,3 +112,52 @@ An HTML templating system is a function;
 it takes a template containing placeholders and a list of named values,
 and produces a completed HTML document.
 
+Elixir has a CLI:
+
+dan@h78:~/elxr/public/notes $ iex
+Interactive Elixir (1.8.1) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> 
+nil
+iex(2)>
+
+I typed h().
+
+iex tells me that is called: h/0:
+
+This message was triggered by invoking the helper h(),
+usually referred to as
+h/0 (since it expects 0 arguments).
+
+I am seeing the documentation for the module IEx.Helpers which
+provides many helpers to make Elixir's shell more joyful to work with.
+
+I can use h/1 function to get information about some specific things:
+
+h(Enum)
+h(Enum.map)
+h(Enum.reverse/1)
+
+Can I use Enum.reverse to reverse a string?
+
+I can use i/1 function to inspect values:
+
+i("hello")
+
+Enum.reverse("hello")
+iex(3)> Enum.reverse("hello")
+** (Protocol.UndefinedError) protocol Enumerable not implemented for "hello"
+    (elixir) lib/enum.ex:1: Enumerable.impl_for!/1
+    (elixir) lib/enum.ex:141: Enumerable.reduce/3
+    (elixir) lib/enum.ex:3015: Enum.reverse/1
+iex(3)>
+
+
+
+iex(3)> Enum.reverse([1,2,3,4])
+[4, 3, 2, 1]
+iex(4)> 
+nil
+iex(5)>
+
+That's better
+

@@ -20,3 +20,32 @@ consistency in a multi threaded environment.
 You worry less about scaling yourapplications.
 
 And, most importantly, you can think about programming in a different way.
+
+
+Combine Transformations with Pipelines
+
+Unix users are accustomed to the philosophy of small, focused
+command-line tools that can be combined in arbitrary ways.
+
+Each tool takes an input, transforms it, and writes the result in a
+format the next tool (or a human) can use.
+
+This philosophy is incredibly flexible and leads to fantastic reuse.
+
+The Unix utilities can be combined in ways undreamed of by their authors.
+
+And each one multiplies the potential of the others.
+
+It’s also highly reliable; each small program does one thing well,which makes it easier to test.
+
+There’s another benefit.
+
+A command pipeline can operate in parallel.
+
+If I write​​
+
+​grep​​ ​​Elixir​​ ​​*.pml​​ ​​|​​ ​​wc​​ ​​-l
+
+​the word-count program, wc, runs at the same time as the grep command.
+
+Because wc consumes grep’s output as it is produced, the answer is ready with virtually no delay once grep finishes.

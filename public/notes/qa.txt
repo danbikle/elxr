@@ -73,4 +73,7 @@ q: Does it make sense for me to learn Erlang and operation of its VM?
 q: Is functional programming synonymous with immutable state of my
    data structures or are these features separate?
 
-q: 
+q: Is knowledge of pipes in Bash useful?
+a: Yes, Elixir embraces the idea of transforming data with pipelines.
+
+

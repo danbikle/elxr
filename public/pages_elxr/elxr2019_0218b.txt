@@ -6,8 +6,7 @@ Foreword
 I have always been fascinated with how changes in hardware
 affect how we write software.
 
-A couple of decades ago, memory was a very
-limited resource.
+A couple of decades ago, memory was a very limited resource.
 
 It made sense back then for our software to take hold
 of some piece of memory and mutate it as necessary.
@@ -22,14 +21,13 @@ At the time, garbage collection was a known technique, but we needed
 faster CPUs in order to use it in our daily software and free
 ourselves from manual memory management.
 
-That has happened—most of our languages are now garbage-collected.
+That has happened; most of our languages are now garbage-collected.
 
 Today, a similar phenomenon is happening.
 
 Our CPUs are not getting anyfaster.
 
 Instead, our computers get more and more cores.
-
 
 This means new software needs to use as many cores as it can if it is
 to maximize its use of the machine.
@@ -68,28 +66,48 @@ distributed software!
 However, I felt there was still a gap in the Erlang ecosystem.
 
 I missed first-class support for some of the features I find necessary
-in my daily work—things such as meta programming, polymorphism, and
+in my daily work, things such as meta programming, polymorphism, and
 first-class tooling.
 
-From this need,
-Elixir was born.Elixir is a pragmatic approach to functional
-programming. It valuesits functional foundations and it focuses on
-developerproductivity. Concurrency is the backbone of Elixir
-software. Asgarbage collection once freed developers from the shackles
-of memorymanagement, Elixir is here to free you from antiquated
-concurrencymechanisms and bring you joy when writing concurrent code.A
-functional programming language lets us think in terms of
-functionsthat transform data. This transformation never mutates
-data. Instead,each application of a function potentially creates a
-new, freshversion of the data. This greatly reduces the need
-fordata-synchronization mechanisms.Elixir also empowers developers by
-providing macros. Elixir code isnothing more than data, and therefore
-can be manipulated via macros likeany other value in the
-language.Finally, object-oriented programmers will find many of
-themechanisms they consider essential to writing good software, such
-aspolymorphism, in Elixir.All this is powered by the Erlang VM, a
-20-year-old virtual machinebuilt from scratch to support robust,
-concurrent, and distributedsoftware. Elixir and the Erlang VM are
-going to change how you writesoftware and make you ready to tackle the
-upcoming years inprogramming.José ValimCreator of ElixirTenczynek,
-Poland, October 2014
+From this need, Elixir was born.
+
+Elixir is a pragmatic approach to functional programming.
+
+It values its functional foundations and it focuses on developer
+productivity.
+
+Concurrency is the backbone of Elixir software.
+
+
+As garbage collection once freed developers from the shackles
+of memory management, Elixir is here to free you from antiquated
+concurrency mechanisms and bring you joy when writing concurrent code.
+
+A functional programming language lets us think in terms of functions
+that transform data.
+
+This transformation never mutates data.
+
+Instead, each application of a function potentially creates a new,
+fresh version of the data.
+
+This greatly reduces the need for data-synchronization mechanisms.
+
+Elixir also empowers developers by providing macros.
+
+Elixir code is nothing more than data, and therefore can be
+manipulated via macros like any other value in the language.
+
+Finally, object-oriented programmers will find many of the mechanisms
+they consider essential to writing good software, such as
+polymorphism, in Elixir.
+
+All this is powered by the Erlang VM, a 20-year-old virtual machine
+built from scratch to support robust, concurrent, and distributed
+software.
+
+Elixir and the Erlang VM are going to change how you write software
+and make you ready to tackle the upcoming years in programming.
+
+José ValimCreator of Elixir
+Tenczynek, Poland, October 2014

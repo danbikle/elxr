@@ -268,3 +268,28 @@ a: Its duration depends linearly on length of input.
    String.length/1 is linear
    Kernel.byte_size/1 is constant
    
+q: Why might I want to avoid the String module?
+a: It is slow.
+
+Here is a demo of some slow syntax which is used to remove a prefix from a string:
+
+
+take_prefix = fn full, prefix ->
+  base = String.length(prefix)
+  String.slice(full, base, String.length(full) - base)
+end
+take_prefix.("Mr. John", "Mr. ")
+
+q: How to declare a function?
+a: Here is a simple demo:
+mysq = fn mynm ->
+  mynm * mynm
+end
+
+mysq.(3.3)
+
+q: Why does this fail:
+   mysql 3.3
+   ??
+   
+

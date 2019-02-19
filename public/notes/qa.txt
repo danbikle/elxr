@@ -16,3 +16,14 @@ q: How to connect Elixir to Postgres?
 
 q: How to pass messages between two Elixir processes?
 
+q: What is the diff tween Elixir 1.6 and 1.8?
+
+q: When I work with Elixir, how visible is Erlang?
+
+q: What is the macro system in Elixir.
+
+q: Why does Dave T call it: "hygienic macro system"?
+
+q: How can I demo compile and runtime evaluation?
+
+

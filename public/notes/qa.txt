@@ -76,4 +76,35 @@ q: Is functional programming synonymous with immutable state of my
 q: Is knowledge of pipes in Bash useful?
 a: Yes, Elixir embraces the idea of transforming data with pipelines.
 
+q: How do I run this:
+defmodule Parallel do
+  def pmap(collection, func) do
+    collection
+    |> Enum.map(&(Task.async(fn -> func.(&1) end)))
+    |> Enum.map(&Task.await/1)
+  end
+end
+
+result = Parallel.pmap 1..1000, &(&1 ​*​ &1)
+
+??
+
+q: Can I put it in a script: dan.exs and do elixir dan.exs?
+a: I think, yes:
+
+dan@h78:~/elxr/public/notes $ elixir -h
+Usage: elixir [options] [.exs file] [data]
+
+elixir pmap1.exs
+** (SyntaxError) pmap1.exs:18: unexpected token: "​" (column 38, codepoint U+200B)
+    (elixir) lib/code.ex:767: Code.require_file/2
+dan@h78:~/elxr/public/notes $ 
+dan@h78:~/elxr/public/notes $ 
+dan@h78:~/elxr/public/notes $
+
+q: How to debug that?
+
+q: How to print something?
+
+
 

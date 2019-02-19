@@ -1,0 +1,39 @@
+Hello,
+
+I am trying to learn Elixir.
+
+I found this demo syntax:
+
+#---
+# http://media.pragprog.com/titles/elixir16/code/spawn/pmap1.exs
+# Excerpted from "Programming Elixir
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material,
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose.
+# Visit http://www.pragmaticprogrammer.com/titles/elixir16 for more book information.
+#---
+defmodule Parallel do
+  def pmap(collection, func) do
+    collection
+    |> Enum.map(&(Task.async(fn -> func.(&1) end)))
+    |> Enum.map(&Task.await/1)
+  end
+end
+
+result = Parallel.pmap 1..1000, &(&1 ​*​ &1)
+
+I put the above syntax in a file: pmap1.exs
+
+Next I tried to run it with a simple shell command:
+
+dan@h78:~/elxr/public/notes $ elixir pmap1.exs
+** (SyntaxError) pmap1.exs:18: unexpected token: "​" (column 38, codepoint U+200B)
+    (elixir) lib/code.ex:767: Code.require_file/2
+dan@h78:~/elxr/public/notes $ 
+dan@h78:~/elxr/public/notes $ 
+dan@h78:~/elxr/public/notes $
+
+Am I running it incorrectly?
+Do I have a syntax error somewhere?
+

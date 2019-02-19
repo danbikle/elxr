@@ -49,3 +49,66 @@ If I write​​
 ​the word-count program, wc, runs at the same time as the grep command.
 
 Because wc consumes grep’s output as it is produced, the answer is ready with virtually no delay once grep finishes.
+
+
+Just to give you a taste of this, here’s an Elixir function called pmap.
+
+It takes a collection and a function, and returns the list that
+results from applying that function to each element of the collection.
+
+But, it runs a separate process to do the conversion of each element.
+
+Don’t worry about the details for now.
+
+#---
+# http://media.pragprog.com/titles/elixir16/code/spawn/pmap1.exs
+# Excerpted from "Programming Elixir
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material,
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose.
+# Visit http://www.pragmaticprogrammer.com/titles/elixir16 for more book information.
+#---
+defmodule Parallel do
+  def pmap(collection, func) do
+    collection
+    |> Enum.map(&(Task.async(fn -> func.(&1) end)))
+    |> Enum.map(&Task.await/1)
+  end
+end
+
+result = Parallel.pmap 1..1000, &(&1 * &1)
+
+Functions Are Data Transformers
+
+Elixir lets us solve the problem in the same way the Unix shell does.
+
+Rather than have command-line utilities, we have functions.
+
+And we can string them together as we please.
+
+The smaller, more focused, those functions, the more flexibility we
+have when combining them.
+
+If we want, we can make these functions run in parallel;
+Elixir has a simple but powerful mechanism for passing messages between them.
+
+And these are not your father’s boring old processes or threads, we’re
+talking about the potential to run millions of them on a single
+machine and have hundreds of these machines interoperating.
+
+Bruce Tate commented on this paragraph with this thought:
+“Most programmers treat threads and processes as a necessary evil;
+Elixir developers feel they are an important simplification.”
+As we get deeper into the book, you’ll start to see what he means.
+
+This idea of transformation lies at the heart of functional programming:
+a function transforms its inputs into its output.
+
+The trigonometric function sin is an example, give it π/4,
+and you’ll getback 0.7071.
+
+An HTML templating system is a function;
+it takes a template containing placeholders and a list of named values,
+and produces a completed HTML document.
+

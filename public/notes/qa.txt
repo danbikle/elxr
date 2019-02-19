@@ -157,11 +157,34 @@ a: According to UTF-8 standard, a codepoint is a single Unicode
 q: How to get the size of a codepoint?
 a: demo: byte_size "A"
          byte_size "á"
-	 
+
+q: How does a String measure the length of a codepoint?
+q: Both a 1 byte codepoint and 2 byte codepoint have a length of 1.
+   This makes sense I'd look at it and say, that is only one letter.
+   demo:
+   String.length "á"
+   
 q: What is a grapheme?
+a: Typically grapheme is plural: graphemes, and is an idea in Unicode.
 
 q: What is a grapheme cluster?
+a: It is the singular name of graphemes?
 
+q: What is a synonym for grapheme cluster?
+a: graphemes
 
-
+q: What are graphemes?
+a: A human might perceive them as a single character.
+   Elixir can do this too with the graphemes/1 function.
+   To demo this I start with two codepoints:
+   cp0_s = "\u0065"
+   byte_size cp0_s
+   cp1_s = "\u0301"
+   byte_size cp1_s
+   string_s = "\u0065\u0301"
+   String.codepoints string_s
+   String.graphemes string_s
+   So, graphemes is both an idea and name of a function.
+   The idea is that a letter can be made from 1 or more pieces and the brain wants to combine them.
+   The graphemes/1 function is used by Elixir to mimic this and present 1 or more codepoints into a human readable letter.
 

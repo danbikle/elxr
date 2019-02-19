@@ -16,7 +16,7 @@ I run a docker instance with this script:
 
 ~/elxr/public/drun.bash
 
-Once it is up I can start an ssh server with this script:
+Once it is up I run a script inside to start an ssh server:
 
 /root/sshd.bash
 

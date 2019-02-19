@@ -1,0 +1,18 @@
+~/elxr/public/notes/qa.txt
+
+This file contains questions and some answers about Elixir.
+
+q: Why is Elixir a "functional" language?
+
+q: What is a "functional" language?
+
+q: Why is mutability of data structures an important topic?
+
+q: How to run an Elixir script?
+
+q: Can I do Linear Regression with Elixir?
+
+q: How to connect Elixir to Postgres?
+
+q: How to pass messages between two Elixir processes?
+

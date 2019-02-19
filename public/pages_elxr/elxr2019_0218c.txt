@@ -248,3 +248,26 @@ Implemented protocols
   Collectable, IEx.Info, Inspect, List.Chars, String.Chars
 iex(12)>
 
+
+
+Free ebook of Programming Elixir ≥ 1.6 for Educational Domains
+If you have a pragprog.com account with a valid email address ending in .edu, you can use coupon code elixir2sFMhJN to get a free ebook of Programming Elixir ≥ 1.6.
+
+Help us get the word out. Tell all of your friends in the .edu world about Elixir. Forward them this newsletter, text them, even call them if you’re feeling retro.
+
+International domains: In addition to .edu in the US, the offer is valid for additional educational domains in other countries. Check the promotions page for the full list.
+
+Choose Your Format(s)
+  eBook + Paper $49.95
+Save $15.95 on the combo pack.
+
+  Paper Book $39.95
+  eBook $25.95
+ Ebooks are DRM free.
+
+ Ebook delivery options.
+
+url of code:
+
+http://media.pragprog.com/titles/elixir16/code/elixir16-code.tgz
+

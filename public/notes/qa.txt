@@ -105,6 +105,48 @@ dan@h78:~/elxr/public/notes $
 q: How to debug that?
 
 q: How to print something?
+a: 
 
+q: In Elixir what does this operator
+   |>
+   do ?
+
+q: What does it mean to ignore a value with underscore _ ?
+
+q: How to do pattern matching?
+
+q: Why is pattern matching important?
+
+q: Variables bind once (per match) means what?
+
+q: How do I look at the equal sign another way?
+
+q: What is a built-in type?
+
+q: What is a value type?
+
+q: What is a system type?
+
+q: What is a Collection type?
+
+q: What are Maps?
+
+q: What are Binaries?
+
+q: What is a Name?
+
+q: What is a source file and how to use it?
+
+q: What is an anonymous function and how to create one?
+
+q: Why are Functions and Pattern matching an important topic?
+
+q: One Function , Multiple Bodies means what?
+
+q: How to return a function from a function?
+
+q: How to pass a function as an argument?
+
+q: 
 
 

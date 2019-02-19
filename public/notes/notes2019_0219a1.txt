@@ -1,0 +1,11 @@
+~/elxr/public/notes/notes2019_0219a1.txt
+
+I should check that u78 has all of elxr commited.
+
+I see an operator on the book cover which confuses me:
+
+Functional 
+|> Concurrent
+|> Pragmatic
+|> Fun
+

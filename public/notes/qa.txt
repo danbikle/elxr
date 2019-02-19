@@ -26,4 +26,51 @@ q: Why does Dave T call it: "hygienic macro system"?
 
 q: How can I demo compile and runtime evaluation?
 
+q: Dave T mentions "tools" and "conventions" for Elixir; what are they?
 
+q: How to demo a script which uses all cores on my host?
+
+q: How to demo a script which uses many hosts?
+
+q: What is OTP?
+
+q: How to do code generation with Elixir?
+
+q: What is an OTP application?
+
+q: How to operate the debugger?
+
+q: What is the code formatter?
+
+q: What is: "Distillery"?
+
+q: What are Elixir protocols?
+
+q: Where is the Errata page?
+a: http://oreilly.com/catalog/9781680502992/errata
+
+q: Does the book have a repo or zip file full of examples?
+
+q: Who is Corey Haines?
+
+q: What are some good online resources?
+
+q: What is the Elixir connectivity framework? Is it Phoenix?
+
+q: Does Phoenix have this connectivity framework?
+
+q: What is the "Nerves Project"?
+
+q: What is embedded Elixir code?
+
+q: What is an example of a Linux based microcontroller?
+
+q: What online Elixir course has Dave T written?
+a: https://codestool.coding-gnome.com/courses/elixir-for-programmers
+
+q: Does it make sense for me to learn Erlang and operation of its VM?
+
+q: Is functional programming synonymous with immutable state of my
+   data structures or are these features separate?
+
+q: 

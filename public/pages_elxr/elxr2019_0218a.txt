@@ -62,24 +62,35 @@ you to experiment.
 
 Part 1 covers the basics of writing sequential Elixir programs.
 
-We'll look at the language, the tools, and the conventions. Part 2 uses these skills to start writing concurrent code-applications that use all the cores on your machine, or all the machines on your network! And we do it both with and without OTP. Part 3 looks at the more advanced features of the language, from DSLs and code generation to extending the syntax.
+We'll look at the language, the tools, and the conventions.
 
-This edition is fully updated with all the new features of Elixir 1.6, with a new chapter on structuring OTP applications, and new sections on the debugger, code formatter, Distillery, and protocols.
+Part 2 uses these skills to start writing concurrent code-applications
+that use all the cores on your machine, or all the machines on your
+network! And we do it both with and without OTP.
+
+Part 3 looks at the more advanced features of the language, from DSLs
+and code generation to extending the syntax.
+
+This edition is fully updated with all the new features of Elixir 1.6,
+with a new chapter on structuring OTP applications, and new sections
+on the debugger, code formatter, Distillery, and protocols.
 
 What You Need:
 
-You'll need a computer, a little experience with another high-levellanguage, and a sense of adventure. No functional programmingexperience is needed.
+You'll need a computer, a little experience with another
+high-levellanguage, and a sense of adventure. No functional
+programming experience is needed.
 
 Publisher Resources
 Errata Page: http://oreilly.com/catalog/9781680502992/errata
 About the Publisher
- 
-The Pragmatic Programmers are publishers of practical, accessible books on software development techniques and business practices. The Pragmatic Bookshelf imprint features books written by developers for developers, with titles that reflect the award-winning Pragmatic Programmer ...
 
-More about Pragmatic Bookshelf
 Table of Contents
- Foreword
- A Vain Attempt at a Justification, Take Two
+
+Foreword
+
+A Vain Attempt at a Justification, Take Two
+
 Acknowledgments
 1. Take the Red Pill
 Programming Should Be About Transforming Data

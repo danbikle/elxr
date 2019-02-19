@@ -9,3 +9,27 @@ Functional
 |> Pragmatic
 |> Fun
 
+p 4
+
+iex
+
+String.reverse "hello"
+
+single quote diff than double quote:
+String.reverse 'hellllo'
+is an error
+
+What other functions are in String module?
+
+h String
+
+gave me lots of info
+
+A String is a UTF-8 encoded binary.
+
+What is a Codepoint?
+
+What is a grapheme?
+
+What is a grapheme cluster?
+

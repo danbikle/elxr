@@ -147,6 +147,21 @@ q: How to return a function from a function?
 
 q: How to pass a function as an argument?
 
-q: 
+q: In Elixir, what is a String?
+a: It is a UTF-8 encoded binary.
+
+q: What is a Codepoint?
+a: According to UTF-8 standard, a codepoint is a single Unicode
+   character which is either 1 byte or 2.
+
+q: How to get the size of a codepoint?
+a: demo: byte_size "A"
+         byte_size "á"
+	 
+q: What is a grapheme?
+
+q: What is a grapheme cluster?
+
+
 
 

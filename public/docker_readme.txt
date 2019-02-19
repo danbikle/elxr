@@ -32,6 +32,7 @@ After that I ssh into the ann account with:
 
 ssh -p 2222 ann@localhost
 
-Once inside the ann account I can see elixir with a bash command:
+Once inside the ann account I can see elixir with bash commands:
 
 elixir -v
+elixir -h

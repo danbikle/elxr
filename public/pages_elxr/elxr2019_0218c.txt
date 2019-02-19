@@ -161,3 +161,90 @@ iex(5)>
 
 That's better
 
+I assumed that i/1 is a helper in IEx module:
+
+iex(6)> IEx.i("hello")
+** (UndefinedFunctionError) function IEx.i/1 is undefined or private
+    (iex) IEx.i("hello")
+iex(6)>
+
+q: Where is the module for i/1, or what is it called?
+
+This looks interesting:
+
+exports/1      - shows all exports (functions + macros) in a module
+
+I tried this:
+exports(IEx)
+
+It worked!
+
+iex(6)> exports(IEx)
+break!/1                  break!/2                  pry/0                     __break__!/2              
+__break__!/3              after_spawn/0             after_spawn/1             break!/3                  
+break!/4                  color/2                   configuration/0           configure/1               
+dont_display_result/0     inspect_opts/0            start/0                   start/1                   
+start/2                   started?/0                width/0                   
+iex(7)>
+
+I tried:
+
+IEx.configuration()
+
+It worked!
+
+iex(8)> IEx.configuration()
+[
+  colors: [],
+  inspect: [pretty: true],
+  history_size: 20,
+  alive_prompt: "%prefix(%node)%counter>",
+  default_prompt: "%prefix(%counter)>"
+]
+iex(9)> 
+
+This looks interesting:
+
+  • pid/1          - creates a PID from a string
+
+why would I call this?
+
+I tried it:
+
+iex(11)> pid('dan')
+** (FunctionClauseError) no function clause matching in IEx.Helpers.pid/1    
+    
+    The following arguments were given to IEx.Helpers.pid/1:
+    
+        # 1
+        'dan'
+    
+    Attempted function clauses (showing 1 out of 1):
+    
+        def pid(string) when is_binary(string)
+    
+    (iex) lib/iex/helpers.ex:1190: IEx.Helpers.pid/1
+iex(11)>
+
+Maybe i/1 is same as IEx.Helpers.i/1 ?
+
+yes!
+
+iex(11)> IEx.Helpers.i("hello")
+Term
+  "hello"
+Data type
+  BitString
+Byte size
+  5
+Description
+  This is a string: a UTF-8 encoded binary. It's printed surrounded by
+  "double quotes" because all UTF-8 encoded codepoints in it are printable.
+Raw representation
+  <<104, 101, 108, 108, 111>>
+Reference modules
+  String, :binary
+Implemented protocols
+  Collectable, IEx.Info, Inspect, List.Chars, String.Chars
+iex(12)>
+

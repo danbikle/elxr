@@ -2,14 +2,81 @@
 
 This file contains questions and some answers about Elixir.
 
+q: The elixir command allows elixir -r file my.exs which means that
+   I "Require" given files/patterns
+   What does this mean?
+   Why would I "Require" a file?
+   The help says I can give -r file more than once; how to?
+
+q: I am allowed: elixir -S SCRIPT
+   which: "Finds and executes the given script in PATH"
+   Is PATH the same as PATH in Bash?
+
+q: I am allowed: elixir -pr file
+   which: "Requires the given files/patterns in parallel"
+   What does this mean? Why would I do it?
+   
+q: I am allowed: elixir -pa path
+   which: "Prepends the given path to Erlang code path.
+   What does this mean? Why would I do it?
+   Can I do this with an env variable?
+   How to list Erlang code path?
+
+q: I am allowed: elixir --app APP
+   which: "Starts the given app and its dependencies"
+   What is an app?
+   How to CCLUD an app?
+
+q: I am allowed: elixir --cookie COOKIE
+   which: Sets a cookie for this distributed node
+   What is a cookie?
+   How to CCLUD a cookie?
+
+q: I am allowed: elixir --hidden
+   which: "Makes a hidden node"
+   What is a hidden node?
+   Why I want a hidden node?
+
+q: I am allowed: elixir --logger-otp-reports BOOL
+   which: Enables or disables OTP reporting
+   What is OTP reporting?
+   Why do I want it?
+   How to see and delete the reports?
+
+
+q: I am allowed: elixir --logger-sasl-reports BOOL
+   which: Enables or disables SASL reporting
+   What is SASL?
+   What is its reporting?
+
+
+q: I am allowed: elixir --name NAME
+   which: Makes and assigns a name to the distributed node
+   Why do I want a name?
+   How to list all the names on all the nodes?
+
+
+q: I am allowed: elixir --sname NAME
+   which: Makes and assigns a short name to the distributed node
+   Is this better than assigning a plain-name (which is probably longer)?
+   Can a node have both a long-name and a short-name?
+   Is it possible to have a name collision which causes problems?
+   
 q: Why is Elixir a "functional" language?
+a: In Elixir, functions are important.
 
 q: What is a "functional" language?
+a: It is a language which ensures that functions are important.
 
 q: Why is mutability of data structures an important topic?
-
+a: Mutable structures lead me into a world of trouble.
+   If I am tempted to mutate a structure, I should instead transform a copy of it.
+   
 q: How to run an Elixir script?
-
+a: I start with elixir -h
+   Which leads me to the simplest example:
+   elixer myscript.exs
+   
 q: Can I do Linear Regression with Elixir?
 
 q: How to connect Elixir to Postgres?

@@ -188,3 +188,16 @@ a: A human might perceive them as a single character.
    The idea is that a letter can be made from 1 or more pieces and the brain wants to combine them.
    The graphemes/1 function is used by Elixir to mimic this and present 1 or more codepoints into a human readable letter.
 
+q: What can I do with the :unicode module?
+a: I can convert a binary to a different encoding.
+
+q: What are some popular encodings?
+
+q: What is a Unicode normalization mechanism?
+a: 
+
+q: What is a function which runs in linear time?
+a: Its duration depends linearly on length of input.
+   String.length/1 is linear
+   Kernel.byte_size/1 is constant
+   

@@ -291,5 +291,73 @@ mysq.(3.3)
 q: Why does this fail:
    mysql 3.3
    ??
-   
 
+
+q: What does this syntax do:
+String.slice("hellohello", 4..-1)
+a:
+iex(9)> String.slice("hellohello", 4..-1)
+"ohello"
+iex(10)>
+
+It slices off the first 4 characters.
+
+q: What does this syntax do:
+String.slice("hellohello", 4)
+a: It gives error bc it expects something like this:
+String.slice("hellohello", first..last)
+I tried this:
+iex(10)> String.slice("hellohello", 3..6)
+"lohe"
+iex(11)>
+
+I tried this:
+iex(11)> String.slice("hellohello", 3..)
+** (SyntaxError) iex:11: syntax error before: ')'
+
+iex(11)>
+
+
+I tried this:
+iex(11)> String.slice("hellohello", 6..3)
+""
+iex(12)>
+
+I tired this:
+iex(12)> String.slice("hellohello", 3..3)
+"l"
+iex(13)> 
+
+
+
+q: What does this code do:
+    iex> take_prefix = fn full, prefix ->
+    ...>   base = byte_size(prefix)
+    ...>   binary_part(full, base, byte_size(full) - base)
+    ...> end
+    iex> take_prefix.("Mr. John", "Mr. ")
+
+a:
+    "John"
+    I looked at some pieces:
+    prefix = "Mr. "
+    full   = "Mr. John"
+    base   = byte_size(prefix) # sb 4
+    byte_size(full) # sb 8
+    binary_part("Mr. John", 4 , 8 - 4)
+    
+
+iex(17)> binary_part("Mr. John", 4 , 8 - 4)
+"John"
+iex(18)>
+It worked!
+
+h binary_part gives me some english logic:
+Extracts the part of the binary starting at start with length length.
+
+A negative length can be used to extract bytes that come before the byte at
+start:
+
+    iex> binary_part("Hello", 5, -3)
+    "llo"
+This makes sense.

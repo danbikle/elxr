@@ -1,0 +1,10 @@
+~/elxr/test/tdd1.txt
+
+I should install favicon.ico
+
+I should enhance layout
+
+I should borrow css from rails4.us
+
+I should study rails4.us routes
+

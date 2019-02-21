@@ -1,5 +1,7 @@
 %h1 Lesson 001 [ Install Elixir ]
 
+%h2 Use Ubuntu
+
 %p I recommend that you use Ubuntu 18.04 for both training and development.
 
 %p Typically on Ubuntu I use a short account name like ann or dan.
@@ -42,9 +44,34 @@
 
 %p If you want to install Elixir on Mac or windows, ask google; I don't know how.
 
-%p After I install Elixir, I checked the version with a Bash command:
+%p After I installed Elixir, I checked the version with a Bash command:
 
 .syntax
   %pre
     %code elixir -v
 
+%hr/
+%h2 .exs scripts
+
+%p In my Desktop folder I wrote a script:
+
+.syntax
+  %pre
+    %code # demo10.exs
+    %code IO.puts "hello world"
+
+%p I ran it and saw this:
+.syntax
+  %pre
+    %code
+      dan@h78:~/Desktop $ elixir demo10.exs 
+      hello world
+      dan@h78:~/Desktop $ 
+
+%p Elixir is often called a "Functional Language" which means, in a simple sense, that functions are important.
+
+%p I wrote a script with a function in it:
+
+.syntax
+  %pre
+    =render 'lesson001b_demo11'

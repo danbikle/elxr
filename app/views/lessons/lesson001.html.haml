@@ -135,4 +135,46 @@
 
 %p Elixir documentation has many examples of: Module.function/integer
 
+%h2 Arity
 
+%p Arity is the integer in: Module.function/integer
+
+%p In the example below I show two functions with the same name but with different arity:
+
+%ul
+  %li Prt.prt3/0
+  %li Prt.prt3/1
+
+%p Elixir allows me to define function syntax for each:
+
+.syntax
+  %pre
+    =render 'lesson001f_demo13'
+
+%p I ran the above script and saw Prt3.prt3 adjust its behavior to arity:
+
+.syntax
+  %pre
+    =render 'lesson001g_demo13'
+
+%h1 Homework
+
+%ul
+  %li
+    Get access to a host running Ubuntu 18.04:
+    %ul
+      %li
+        %a(href='https://www.google.com/search?q=amazon+free+tier' target='x')
+          https://www.google.com/search?q=amazon+free+tier
+      %li
+        %a(href='https://www.google.com/search?q=google+gcp+free+trial' target='x')
+          https://www.google.com/search?q=google+gcp+free+trial
+      %li
+        %a(href='https://www.google.com/search?q=oracle+cloud+free+trial' target='x')
+          https://www.google.com/search?q=oracle+cloud+free+trial
+  %li Install Elixir on Ubuntu 18.04.
+  %li Use Elixir to print your name.
+  %li Use an Elixir function in a module to print your name.
+  %li Use an Elixir function outside a module to print your name.
+  %li Demonstrate a function in a module which adjusts its behavior to arity.
+  

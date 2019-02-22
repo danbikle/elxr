@@ -121,6 +121,18 @@
 
 %p "If I need to write to stderr, I can use IO.puts/2"
 
+%p Here is an example of me calling String.slice/3:
+
+.syntax
+  %pre
+    %code String.slice "helloworld", 1, 4
+
+%p The above function, which accepts 3 arguments, should return 4 characters from a String.
+
+%p The 1-value says to start counting at 1 character after 0 which is "e".
+
+%p The above call should return the sub-String: "ello"
+
 %p Elixir documentation has many examples of: Module.function/integer
 
 

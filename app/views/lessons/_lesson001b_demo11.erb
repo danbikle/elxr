@@ -7,16 +7,17 @@ defmodule Mymod1 do
   def prt_hello do
     IO.puts "Hello California"
   end
-
-  def prt input do
-    IO.puts input
+  
+  # Parenthesis optional here:
+  def prt(input) do
+    IO.puts(input) # Parenthesis optional here.
   end
 
 end
 
-Mymod1.prt_hello
+Mymod1.prt_hello() # Parenthesis optional here.
 
-Mymod1.prt "Hello Colo."
+Mymod1.prt("Hello Colo.") # Parenthesis optional here.
 Mymod1.prt 123.6
 
 </code>

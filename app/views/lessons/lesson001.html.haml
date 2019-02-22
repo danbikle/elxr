@@ -70,7 +70,12 @@
 
 %p Elixir is often called a "Functional Language" which means, in a simple sense, that functions are important.
 
-%p I wrote a script with two functions inside one module:
+%p Most languages require that I use parenthesis when I define or call functions.
+
+%p Usually, Elixir allows me to omit parenthesis.
+
+%p I wrote a script with two functions inside one module.
+%p One of the functions has parenthesis, but they are not necessary:
 
 .syntax
   %pre
@@ -79,7 +84,19 @@
 %p When I write Elixir scripts, I often put my functions in a module; you should too.
 
 %p I ran the script and saw this:
+
 .syntax
   %pre
     =render 'lesson001c_demo11'
-    
+
+%p Elixir does allow me to create standalone functions; they don't need to be in a module.  An example of that is displayed below:
+
+.syntax
+  %pre
+    =render 'lesson001d_demo11'
+
+%p I ran the above script and saw this:
+
+.syntax
+  %pre
+    =render 'lesson001e_demo11'

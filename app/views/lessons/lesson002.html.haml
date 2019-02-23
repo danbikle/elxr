@@ -1,0 +1,43 @@
+%h1 Lesson 002 [ Concurrency ]
+
+%h2 Motivation
+
+%p I am motivated to learn Elixir because I want to easily scale computing across a cluster.
+
+%p If I want to run software on just one host, I'd use Python.
+
+%p Elixir has nice syntax but that is not enough reason to spend hundreds of hours to learn it.
+
+%p With that in mind, let us start Lesson 002.
+
+%h2 elixirc
+
+%p The elixir shell command can interpret a script and run the Elixir syntax inside.
+
+%p The command can also execute a file which has been compiled from an Elixir script.
+
+%p To demonstrate how to interpret an elixir script I wrote the script listed below:
+
+.syntax
+  %pre
+    =render 'lesson002a_i'
+
+%p I asked Elixir to both interpret and run the above script:
+
+.syntax
+  %pre
+    %code
+      dan@h78:~/elxr/public/lesson002 $ elixir lesson002a.exs 
+      Hello 1
+      dan@h78:~/elxr/public/lesson002 $ 
+      dan@h78:~/elxr/public/lesson002 $
+
+%p So, that is easy to do.
+%p I see that as operating Elixir like how I operate Python.
+
+
+%h1 Homework
+
+%ul
+  %li Create a simple Elixir script and compile it.
+  

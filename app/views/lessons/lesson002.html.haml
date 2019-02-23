@@ -32,8 +32,43 @@
       dan@h78:~/elxr/public/lesson002 $ 
       dan@h78:~/elxr/public/lesson002 $
 
-%p So, that is easy to do.
-%p I see that as operating Elixir like how I operate Python.
+%p So, that was easy.
+%p I see that, as operating Elixir like how I operate Python.
+
+%p Next, I created a script called: "lesson002b.ex"
+
+%p The ".ex" tells me that I should compile this script.
+
+%p Elixir sees no difference between the exs-suffix and the ex-suffix, but I do.
+
+%p The script is listed below:
+
+.syntax
+  %pre
+    =render 'lesson002b_x'
+
+%p Next, I used the elixirc shell command to compile lesson002b.ex:
+
+.syntax
+  %pre
+    %code elixirc lesson002b.ex
+
+%p Then, I used the elixir command to run compiled software:
+
+.syntax
+  %pre
+    %code elixir -e "Elixir.SpawnMod.hello2"
+
+%p It worked!
+
+%p I captured a screen shot of the above steps for you:
+
+
+.syntax
+  %pre
+    =render 'lesson002c_ss'
+
+
 
 
 %h1 Homework

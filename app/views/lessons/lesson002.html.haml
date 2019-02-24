@@ -63,12 +63,27 @@
 
 %p I captured a screen shot of the above steps for you:
 
-
 .syntax
   %pre
     =render 'lesson002c_ss'
 
+%h2 spawn/3
 
+%p Now that I know how to compile Elixir syntax and then run it, I should learn about spawn/3.
+
+%p I should use spawn/3 when I want to spawn a process which is a skill I need when I scale Elixir across cores in a host or hosts in a cluster.
+
+%p I wrote a simple script to demostrate how to combine the spawn/3 function with compiled Elixir software:
+
+.syntax
+  %pre
+    =render 'lesson002d_spawn'
+
+%p I ran the above script and captured output for you:
+
+.syntax
+  %pre
+    =render 'lesson002d_spawnrun'
 
 
 %h1 Homework

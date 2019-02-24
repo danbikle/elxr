@@ -1,6 +1,6 @@
-# lesson002c.exs
+# lesson002d.exs
 
-# This script should call spawn() which should create a Process.
+# This script should call spawn/3 which should create a Process.
 # A Process should have an identifier which we call a: "PID".
 
 # The spawn/3 function wants these arguments:

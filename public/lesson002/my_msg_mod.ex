@@ -6,36 +6,44 @@
 # Demo:
 # elixirc my_msg_mod.ex
 # ls -l *.beam
-# elixir -e "Elixir.MyMsgMod.rcv_snd1"
+# elixir -e "Elixir.MyMsgMod.my_sndr"
+
+# Wakeup MyMsgMod.my_rcv and get its pid
+# sender -- "Sell FB!, Sell AAPL!" -- > pid
+# receiver sees: {sender_pid, msg}
+# receiver -- "I got your msg."    -- > acksender_pid
+# sender sees: {acksender_pid, msg}
 
 defmodule MyMsgMod do
-  # This module should help me demonstrate how to receive and send messages.
-  def rcv1 do
-    # This function should help me demonstrate how to receive messages.
+  def my_rcv do
+    # I should wait for a msg:
     receive do
-      {sender, msg4me_s} ->
-      IO.puts "sender: "
-      IO.puts inspect(sender)
-      IO.puts "I received this: "
-      IO.puts inspect(msg4me_s)
+      {sender_pid, msg} ->
+        IO.puts inspect(self())
+        IO.puts "received: "
+	IO.puts inspect(msg)
+	IO.puts "From sender_pid:"
+	IO.puts inspect(sender_pid)
+	# I should acknowledge the msg:
+	msg2_s = "I got your msg."
+        send sender_pid, {self(), msg2_s}
     end
   end
 
-  def snd_to(pid) do
-    # This function should help me demonstrate how to send messages.
-    msg_s = "Sell FB!, Sell AAPL!, Buy IBM(maybe)"
-    IO.puts("I sent msg_s:")
-    IO.puts  msg_s
-    IO.puts "to pid: "
-    IO.puts inspect(pid)
-    send pid, {self(), msg_s}
-  end
-
-  def rcv_snd1 do
-    # This function should help me demonstrate how to receive and send messages.
-    my_pid = spawn(MyMsgMod, :rcv1, [])
-    IO.puts "my_pid: "
-    IO.puts inspect(my_pid)
-    snd_to(my_pid)
+  def my_sndr do
+    pid = spawn(MyMsgMod, :my_rcv, [])
+    # I should send a message:
+    msg1_s = "Sell FB!, Sell AAPL!"
+    send pid, {self(), msg1_s}
+    # I should receive acknowledgement:
+    receive do
+      {acksender_pid, message} ->
+      IO.puts "Then, "
+      IO.puts inspect(acksender_pid)
+      IO.puts "Says: "
+      IO.puts message
+    end
   end
 end
+
+

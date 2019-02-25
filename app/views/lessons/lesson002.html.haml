@@ -87,13 +87,12 @@
 
 %h2 send/3
 
-%p A feature which Elixir uses to scale work across a cluster is message sending.
-
+%p Elixir uses "message sending" as a way to distribute work across a cluster".
 %p In the above demo I used spawn/3 to get a PID.
 
 %p After I have a PID, I can send a message to the PID's process using send/3.
 
-%p Here is some syntax which shows send/3 in action:
+%p Here is some syntax which shows how to coordinate spawn/3 with send/3.
 
 .syntax
   %pre

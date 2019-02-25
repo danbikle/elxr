@@ -8,11 +8,16 @@
 # ls -l *.beam
 # elixir -e "Elixir.MyMsgMod.my_sndr"
 
+# ASCII art and English description of the demo:
 # Wakeup MyMsgMod.my_rcv and get its pid
 # sender -- "Sell FB!, Sell AAPL!" -- > pid
 # receiver sees: {sender_pid, msg}
 # receiver -- "I got your msg."    -- > acksender_pid
 # sender sees: {acksender_pid, msg}
+
+# Notice that we have two messages in the demo.
+# spawn/3 is called once.
+# send/3 is called twice.
 
 defmodule MyMsgMod do
   def my_rcv do

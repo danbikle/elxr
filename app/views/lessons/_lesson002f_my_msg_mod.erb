@@ -1,0 +1,34 @@
+<code class='bash'>
+dan@h78:~/elxr/public/lesson002 $ rm *.beam
+dan@h78:~/elxr/public/lesson002 $ 
+
+
+dan@h78:~/elxr/public/lesson002 $ ls -la m*x
+-rw-rw-r-- 1 dan dan 1296 Feb 25 14:02 my_msg_mod.ex
+dan@h78:~/elxr/public/lesson002 $ 
+
+
+dan@h78:~/elxr/public/lesson002 $ elixirc my_msg_mod.ex
+dan@h78:~/elxr/public/lesson002 $ 
+
+
+dan@h78:~/elxr/public/lesson002 $ ls -l *.beam
+-rw-rw-r-- 1 dan dan 2120 Feb 25 14:10 Elixir.MyMsgMod.beam
+dan@h78:~/elxr/public/lesson002 $ 
+
+
+dan@h78:~/elxr/public/lesson002 $ elixir -e "Elixir.MyMsgMod.my_sndr"
+#PID<0.93.0>
+received: 
+"Sell FB!, Sell AAPL!"
+From sender_pid:
+#PID<0.92.0>
+Then, 
+#PID<0.93.0>
+Says: 
+I got your msg.
+dan@h78:~/elxr/public/lesson002 $ 
+dan@h78:~/elxr/public/lesson002 $ 
+dan@h78:~/elxr/public/lesson002 $
+
+</code>

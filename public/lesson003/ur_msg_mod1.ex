@@ -14,6 +14,8 @@
 # receiver sees: {sender_pid, msg}
 # receiver -- "I got your msg."    -- > acksender_pid
 # sender sees: {acksender_pid, msg}
+# Wakeup MyMsgMod.my_rcv and get its pid
+# sender -- "Sell more IBM!!" -- > pid
 
 defmodule UrMsgMod1 do
   def ur_rcv do
@@ -34,7 +36,7 @@ defmodule UrMsgMod1 do
   def ur_sndr do
     pid = spawn(UrMsgMod1, :ur_rcv, [])
     # I should send a message:
-    msg1_s = "Sell FB!, Sell AAPL!"
+    msg1_s = "Sell IBM!!"
     send pid, {self(), msg1_s}
     # I should receive acknowledgement:
     receive do

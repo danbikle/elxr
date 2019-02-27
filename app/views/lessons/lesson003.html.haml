@@ -1,1 +1,30 @@
-%h1 Lesson 003 [ More Concurrency ]
+%h1 Lesson 003 [ More spawn/3, send/3, and receive ]
+
+%p To gain a better understanding of spawn/3, send/3, and receive, I created a variety of demonstrations.
+
+%p I started with the demo displayed below:
+
+.syntax
+  %pre
+    =render 'lesson003a_d1'
+
+%p When I study the above script I see that spawn/3 is called only once.
+
+%p After it is called, I should get a process from UrMsgMod1.ur_rcv()
+
+%p That function, ur_rcv/0 is a simple wrapper around two receive-blocks.
+
+%p A bit of thought reveals that the Elixir receive-block is a somewhat primitive  feature.
+
+%p It is designed to run only once.
+
+%p It does not contain any kind of mechanism which might feel natural to a UI programmer who understands and uses event-loops.
+
+%p Also it will feel unnatural to a web programmer who wants to send an arbitrary number of requests to a web server.
+
+%p If I see a function which goes silent after it responds to only one message, I should then understand that function to be primitive.
+
+%p
+  %a(href='https://www.google.com/search?q=In+software+what+is+an+event+loop' target='x')
+    https://www.google.com/search?q=In+software+what+is+an+event+loop
+  

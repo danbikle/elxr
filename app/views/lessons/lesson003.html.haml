@@ -12,7 +12,7 @@
 
 %p After it is called, I should get a process from UrMsgMod1.ur_rcv()
 
-%p That function, ur_rcv/0 is a simple wrapper around two receive-blocks.
+%p That process, running the function: ur_rcv/0, is a simple wrapper around two receive-blocks.
 
 %p A bit of thought reveals that the Elixir receive-block is a somewhat primitive  feature.
 
@@ -20,11 +20,30 @@
 
 %p It does not contain any kind of mechanism which might feel natural to a UI programmer who understands and uses event-loops.
 
-%p Also it will feel unnatural to a web programmer who wants to send an arbitrary number of requests to a web server.
-
-%p If I see a function which goes silent after it responds to only one message, I should then understand that function to be primitive.
-
 %p
   %a(href='https://www.google.com/search?q=In+software+what+is+an+event+loop' target='x')
     https://www.google.com/search?q=In+software+what+is+an+event+loop
   
+%p Also it will feel unnatural to a web programmer who wants to send an arbitrary number of requests to a web server.
+
+%p When I see a function which goes silent after it responds to only one message, I should then understand that function to be primitive.
+
+%h2 Happy-Path
+
+%p The above script is written to support a "happy-path" scenario which has the script send only two messages and receive only two messages.
+
+%p I ran the above script and collected output for you:
+
+.syntax
+  %pre
+    =render 'lesson003b_d2'
+
+%h2 UnHappy-Path
+
+%p Next, I wrote a script to demonstrate an unhappy-path which sends two messages to a function which is written to receive only one message because it contains only one receive-block:
+
+
+.syntax
+  %pre
+    =render 'lesson003c_d3'
+

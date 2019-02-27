@@ -41,7 +41,7 @@ defmodule MyMsgMod do
     # I should send a message:
     msg1_s = "Sell FB!, Sell AAPL!"
     send pid, {self(), msg1_s}
-    # I should receive acknowledgement:
+    # I should receive acknowledgment:
     receive do
       {acksender_pid, message} ->
       IO.puts "Then, "

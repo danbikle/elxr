@@ -31,7 +31,7 @@ defmodule Uh1MsgMod do
     # I should send first message:
     msg1_s = "Sell IBM!!"
     send pid, {self(), msg1_s}
-    # I should receive acknowledgement:
+    # I should receive acknowledgment:
     receive do
       {acksender_pid, message} ->
       IO.puts "Then, "
@@ -42,7 +42,7 @@ defmodule Uh1MsgMod do
     # I should send second message:
     msg2_s = "Sell more IBM!!"
     send pid, {self(), msg2_s}
-    # I should receive second acknowledgement:
+    # I should receive second acknowledgment:
     receive do
       {acksender_pid, message} ->
       IO.puts "Then, "

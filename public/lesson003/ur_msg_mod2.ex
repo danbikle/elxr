@@ -1,4 +1,3 @@
-<code class='elixir'>
 # ur_msg_mod2.ex
 
 # This script should create a Module I use to demonstrate how to
@@ -16,7 +15,7 @@
 # receiver -- "I got your first msg." -- > acksender_pid
 # sender sees: {acksender_pid, msg}
 # sender -- "Sell more IBM!!" -- > pid
-# sender times-out waiting from acknowledgment
+
 
 defmodule UrMsgMod2 do
   def ur_rcv do
@@ -58,7 +57,7 @@ defmodule UrMsgMod2 do
       IO.puts inspect(acksender_pid)
       IO.puts "Says again: "
       IO.puts message
-      # I should timeout after 500 milliseconds:
+      # I should time-out after 500 milliseconds:
       after 500 ->
         IO.puts "I sent a msg to:"
         IO.puts inspect(pid)
@@ -66,5 +65,3 @@ defmodule UrMsgMod2 do
     end
   end
 end
-
-</code>

@@ -73,7 +73,17 @@
 
 %p That session is displayed to you below:
 
-
 .syntax
   %pre
     =render 'lesson003f_d5'
+
+%p Another way to enhance the script is to rely on recursion to force the function to receive messages until the sender is exhausted.
+
+%p I recurse by first noting the name of the function which wraps the receive-block.
+
+%p Then I write a call to the function into the receive-block:
+
+.syntax
+  %pre
+    =render 'lesson003g_d6'
+

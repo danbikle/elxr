@@ -1,14 +1,14 @@
-# uh1_msg_mod1.ex
+# uh1_msg_mod.ex
 
 # This script should create a Module I use to demonstrate
 # an Unhappy-Path of receive and send messages.
 
 # Demo:
-# elixirc uh1_msg_mod1.ex
+# elixirc uh1_msg_mod.ex
 # ls -l *.beam
-# elixir -e "Elixir.Uh1MsgMod1.ur_sndr"
+# elixir -e "Elixir.Uh1MsgMod.uh_sndr"
 
-defmodule Uh1MsgMod1 do
+defmodule Uh1MsgMod do
   def uh_rcv do
     # I should wait for first msg:
     receive do
@@ -27,7 +27,7 @@ defmodule Uh1MsgMod1 do
   end
 
   def uh_sndr do
-    pid = spawn(Uh1MsgMod1, :uh_rcv, [])
+    pid = spawn(Uh1MsgMod, :uh_rcv, [])
     # I should send first message:
     msg1_s = "Sell IBM!!"
     send pid, {self(), msg1_s}

@@ -81,9 +81,24 @@
 
 %p I recurse by first noting the name of the function which wraps the receive-block.
 
-%p Then I write a call to that function into the receive-block:
+%p Then I write a call to that function into the receive-block.
+
+%p If you are new to recursion, this script is a simple demo.
+
+%p The script has a function named ur_rcv/0.
+
+%p Inside of ur_rcv/0, is a call to ur_rcv/0:
 
 .syntax
   %pre
     =render 'lesson003g_d6'
+
+%p I ran the script and it behaved well.
+
+%p I captured that session. It is displayed below:
+
+.syntax
+  %pre
+    =render 'lesson003h_d7'
+
 

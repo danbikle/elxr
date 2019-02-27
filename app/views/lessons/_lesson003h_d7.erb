@@ -1,0 +1,40 @@
+<code class='bash'>
+dan@h78:~/elxr/public/lesson003 $ rm *beam
+dan@h78:~/elxr/public/lesson003 $ 
+dan@h78:~/elxr/public/lesson003 $
+
+
+dan@h78:~/elxr/public/lesson003 $ elixirc ur_msg_mod3.ex
+dan@h78:~/elxr/public/lesson003 $ 
+dan@h78:~/elxr/public/lesson003 $
+
+
+dan@h78:~/elxr/public/lesson003 $ ls -la *beam
+-rw-rw-r-- 1 dan dan 2572 Feb 26 22:54 Elixir.UrMsgMod3.beam
+dan@h78:~/elxr/public/lesson003 $ 
+dan@h78:~/elxr/public/lesson003 $ 
+
+
+dan@h78:~/elxr/public/lesson003 $ elixir -e "Elixir.UrMsgMod3.ur_sndr"
+#PID&lt;0.93.0>
+received: 
+"Sell IBM!!"
+From sender_pid:
+#PID&lt;0.92.0>
+Then, 
+#PID&lt;0.93.0>
+Says: 
+I got your msg.
+#PID&lt;0.93.0>
+received: 
+"Sell more IBM!!"
+From sender_pid:
+#PID&lt;0.92.0>
+Then, 
+#PID&lt;0.93.0>
+Says again: 
+I got your msg.
+dan@h78:~/elxr/public/lesson003 $ 
+dan@h78:~/elxr/public/lesson003 $
+
+</code>

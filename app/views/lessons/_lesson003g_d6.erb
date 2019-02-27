@@ -14,10 +14,14 @@
 # Wakeup UrMsgMod3.ur_rcv and get its pid
 # sender -- "Sell IBM!!" -- > pid
 # receiver sees: {sender_pid, msg}
-# receiver -- "I got your first msg." -- > acksender_pid
+# receiver -- "I got your msg." -- > acksender_pid
+# re-call: UrMsgMod3.ur_rcv()
+# receiver, with same pid as before, ready for more messages
 # sender sees: {acksender_pid, msg}
 # sender -- "Sell more IBM!!" -- > pid
-
+# receiver sees: {sender_pid, msg}
+# receiver -- "I got your msg." -- > acksender_pid
+# sender sees: {acksender_pid, msg}
 
 defmodule UrMsgMod3 do
   def ur_rcv do

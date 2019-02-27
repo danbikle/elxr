@@ -63,12 +63,12 @@ defmodule UrMsgMod1 do
     # I should send second message:
     msg2_s = "Sell more IBM!!"
     send pid, {self(), msg2_s}
-    # I should receive acknowledgement:
+    # I should receive second acknowledgement:
     receive do
       {acksender_pid, message} ->
       IO.puts "Then, "
       IO.puts inspect(acksender_pid)
-      IO.puts "Says: "
+      IO.puts "Says again: "
       IO.puts message
     end
   end

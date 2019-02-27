@@ -29,7 +29,7 @@ defmodule UrMsgMod3 do
 	IO.puts "From sender_pid:"
 	IO.puts inspect(sender_pid)
 	# I should acknowledge the msg:
-	msg2_s = "I got your first msg."
+	msg2_s = "I got your msg."
         send sender_pid, {self(), msg2_s}
 	# I should use recursion to wait for more messages:
 	ur_rcv()

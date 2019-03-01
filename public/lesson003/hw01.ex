@@ -17,9 +17,10 @@ defmodule Hw01 do
   
   def fn02 do
     "I am fn02"
+    mypid = spawn(Hw01, :fn01, [])
+    send mypid, {self, "hi!"}
   end
     
 end
 
-# I should call the first function:
-Hw01.fn01
+

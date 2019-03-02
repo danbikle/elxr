@@ -1,6 +1,6 @@
 # hw3u.ex
 
-# hw: In the module write a fourth function which only sends a message and receives an acknowldgment.
+# hw: Enhance the module so the third and fourth functions are used in the first and second.
 
 # This script should:
 # have a module that holds two functions.

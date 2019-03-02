@@ -1,12 +1,47 @@
-%h1 Lesson 004 [ Under Construction ]
+%h1 Lesson 004 [ Recursion ]
+
+%p In Lesson 003 I showed how to use recursion to receive messages from a sender until the sender is exhausted.
+
+%p A good Elixir developer is skilled at using recursion.
+
+%p Let us study recursion some more.
 
 %p I describe a thought process below I used to write syntax to calculate factoral(n) via tail recursion.
 
-%p Calculating factoral(n) with plain recursion is simple:
+%p Before I do that though, I claim that calculating factoral(n) with plain recursion is simple:
 
 %p factoral(n) is n * factoral(n-1) until n is 1 where factoral(0) is defined as 1.
 
+%h2 Plain Recursion
+
 %p It is easy to code up factoral(n) using plain recursion.
 
-%p Based on what I learned in Lessons 001, 002, 003 I started by writing a module.
+%p Based on what I learned in Lessons 001, 002, 003 I started by writing a module:
 
+.syntax
+  %pre
+    =render 'lesson004a'
+
+%p Also, notice that I added function to the module and a function call below the module.
+
+%p I ran it and saw this:
+
+.syntax
+  %pre
+    %code
+      dan@h78:~/elxr/public/lesson004 $ elixir d10.ex
+      1
+      dan@h78:~/elxr/public/lesson004 $ 
+      dan@h78:~/elxr/public/lesson004 $
+      
+%p Next, I enhanced the function in the module:
+
+.syntax
+  %pre
+    =render 'lesson004b'
+
+%p I ran it and saw this:
+
+.syntax
+  %pre
+    =render 'lesson004c'

@@ -2,7 +2,6 @@
 
 # This script should:
 # have a module that holds two functions.
-# Below the module, a line should call the first function.
 # Demo:
 # elixir hw3i.ex
 

@@ -1,11 +1,12 @@
-# hw3j.ex
+# hw3l.ex
 
 # This script should:
 # have a module that holds two functions.
+# Below the module, a line should call the second function.
 # Demo:
-# elixir hw3j.ex
+# elixir hw3l.ex
 
-defmodule Hw3j do
+defmodule Hw3l do
 
   # This module should hold two functions.
   
@@ -21,12 +22,14 @@ defmodule Hw3j do
 
   def fn2 do
     # I should call spawn/3 which spawns a call to the first function.
-    fn1_pid = spawn Hw3j, :fn1, []
+    fn1_pid = spawn Hw3l, :fn1, []
     # I should call send/2.
-    send 1,2
+    # It should send message to first function process.
+    send fn1_pid, {self(), "fn2 says hi to fn1."}
+    IO.puts "I called fn2"
   end
 
 end
 
-# I should call the first function:
-# Hw3j.fn1
+# I should call the second function:
+Hw3l.fn2

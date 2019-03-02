@@ -1,10 +1,10 @@
-%h1 Lesson 002 [ spawn/3, send/3, and receive ]
+%h1 Lesson 002 [ spawn/3, send/2, and receive ]
 
 %h2 Motivation
 
 %p I am motivated to learn Elixir because I want to easily scale computing across a cluster.
 
-%p A way to start down this path is to learn about: spawn/3, send/3, and receive.
+%p A way to start down this path is to learn about: spawn/3, send/2, and receive.
 
 %p If I want to run software on just one host, I'd use Python.
 
@@ -89,14 +89,14 @@
   %pre
     =render 'lesson002d_spawnrun'
 
-%h2 send/3
+%h2 send/2
 
 %p Elixir uses "message sending" as a way to distribute work across a cluster.
 %p In the above demo I used spawn/3 to get a PID.
 
-%p After I have a PID, I can send a message to the PID's process using send/3.
+%p After I have a PID, I can send a message to the PID's process using send/2.
 
-%p Here is some syntax which shows how to coordinate spawn/3 with send/3.
+%p Here is some syntax which shows how to coordinate spawn/3 with send/2.
 
 .syntax
   %pre

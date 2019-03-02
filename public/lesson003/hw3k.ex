@@ -1,5 +1,7 @@
 # hw3k.ex
 
+# hw: Enhance the send/2 call so it sends a message to first function process.
+
 # This script should:
 # have a module that holds two functions.
 # Demo:

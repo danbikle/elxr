@@ -1,5 +1,7 @@
 # hw3j.ex
 
+# hw: Enhance the second function so it calls send/2.
+
 # This script should:
 # have a module that holds two functions.
 # Demo:

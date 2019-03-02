@@ -1,5 +1,7 @@
 # hw3d.ex
 
+# hw: Enhance the receive-block so it matches a tuple.
+
 # This script should:
 # have a module that holds two functions.
 # Demo:

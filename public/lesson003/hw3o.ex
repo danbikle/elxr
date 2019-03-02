@@ -1,5 +1,7 @@
 # hw3o.ex
 
+# hw: Enhance/run second function so it sends 5 messages to first function.
+
 # This script should:
 # have a module that holds two functions.
 # Below the module, a line should call the second function.

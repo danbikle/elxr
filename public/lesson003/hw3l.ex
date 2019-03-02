@@ -1,5 +1,7 @@
 # hw3l.ex
 
+# hw: Below the module, write a line which calls the second function.
+
 # This script should:
 # have a module that holds two functions.
 # Below the module, a line should call the second function.

@@ -1,5 +1,7 @@
 # hw3m.ex
 
+# hw: Run the script and see if the second function gets called.
+
 # This script should:
 # have a module that holds two functions.
 # Below the module, a line should call the second function.

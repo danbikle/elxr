@@ -1,5 +1,7 @@
 # hw3a.ex
 
+# hw: Write a script which has a module that holds two functions.
+
 # This script should:
 # have a module that holds two functions.
 # Demo:

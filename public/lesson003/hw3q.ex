@@ -1,5 +1,7 @@
 # hw3q.ex
 
+# hw: Enhance first function so it acknowledges messages from second function.
+
 # This script should:
 # have a module that holds two functions.
 # Below the module, a line should call the second function.

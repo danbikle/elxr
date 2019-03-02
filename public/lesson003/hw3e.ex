@@ -1,5 +1,7 @@
 # hw3e.ex
 
+# hw: For that tuple, write a function body which returns string: "hello".
+
 # This script should:
 # have a module that holds two functions.
 # Demo:

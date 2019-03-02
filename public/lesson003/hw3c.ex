@@ -1,5 +1,7 @@
 # hw3c.ex
 
+# hw: Enhance the first function so it has a receive-block.
+
 # This script should:
 # have a module that holds two functions.
 # Demo:

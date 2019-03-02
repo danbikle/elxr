@@ -1,14 +1,14 @@
-# hw3r.ex
+# hw3s.ex
 
-# hw: Enhance second function so it receives and prints acknowledgments.
+# hw: In the module write a third function which only receives a message and sends an acknowldgment.
 
 # This script should:
 # have a module that holds two functions.
 # Below the module, a line should call the second function.
 # Demo:
-# elixir hw3r.ex
+# elixir hw3s.ex
 
-defmodule Hw3r do
+defmodule Hw3s do
 
   # This module should hold two functions.
   
@@ -28,7 +28,7 @@ defmodule Hw3r do
   def fn2 do
     IO.puts "I called fn2"
     # I should call spawn/3 which spawns a call to the first function.
-    fn1_pid = spawn Hw3r, :fn1, []
+    fn1_pid = spawn Hw3s, :fn1, []
     # I should call send/2.
     # It should send message to first function process.
     send fn1_pid, {self(), "fn2 says 1 hi to fn1."}
@@ -42,8 +42,15 @@ defmodule Hw3r do
     receive do {ack} -> IO.puts inspect({ack, 4}) end
     receive do {ack} -> IO.puts inspect({ack, 5}) end
   end
-
+  
+  def rcvm_sndack({pid, msg_s}) do
+    # This function should
+    # only receive a message and send an acknowldgment.
+    receive do
+      {pid, msg_s} -> send pid, {"ack"}
+    end
+  end
 end
 
 # I should call the second function:
-Hw3r.fn2
+Hw3s.fn2

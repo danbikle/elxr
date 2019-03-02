@@ -1,5 +1,7 @@
 # hw3i.ex
 
+# hw: Enhance the call to spawn/3 so it spawns a call to the first function.
+
 # This script should:
 # have a module that holds two functions.
 # Demo:

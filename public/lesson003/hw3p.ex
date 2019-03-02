@@ -1,5 +1,7 @@
 # hw3p.ex
 
+# hw: Enhance first function so it receives 5 messages via recursion.
+
 # This script should:
 # have a module that holds two functions.
 # Below the module, a line should call the second function.

@@ -1,5 +1,7 @@
 # hw3f.ex
 
+# hw: Enhance the tuple so it matches: {PID, some_string}
+
 # This script should:
 # have a module that holds two functions.
 # Demo:

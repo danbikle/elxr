@@ -1,5 +1,7 @@
 # hw3h.ex
 
+# hw:  Enhance the second function so it calls spawn/3.
+
 # This script should:
 # have a module that holds two functions.
 # Demo:

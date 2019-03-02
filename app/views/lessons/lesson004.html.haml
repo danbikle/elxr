@@ -45,3 +45,93 @@
 .syntax
   %pre
     =render 'lesson004c'
+
+%p So, writing syntax to calculate factoral(n) with plain recursion is easy.
+
+%p Using tail recursion is difficult until you wrestle with it a bit.
+
+%p I started by writing syntax to help me understand the general idea of tail recursion:
+
+.syntax
+  %pre
+    =render 'lesson004d'
+
+%p The way I remember tail recursion is that the recusive call should be: "alone".
+
+%p So that part is easy; We can now understand what tail recursion is via a simple bit of syntax.
+
+%p To calculate factoral(n) is more difficult.
+
+%p When I study the above syntax I recognize that I need a way to store the cumulative product.
+
+%p If we had access to a global variable, we could store the product as n moves toward 0.
+
+%p But variables in Elixir are immutable.
+
+%p Also functions are walled off; they can only see arguments passed in and variables created on the inside.
+
+%p At this point I was mentally stuck; I could not find a way to grow a cumulative product as n moved towards 0.
+
+%p So, I found some help via google.
+
+%p It showed me useful ideas:
+
+%ul
+  %li Store the cumulative product as an argument.
+  %li Bring in a "crutch-function" which has 2 arguments: n and cumulative_prod.
+  %li The factoral function does not need to be recursive at all.
+  %li The crutch-function should be recursive.
+  %li The factoral function will "wrap" the crutch-function
+  
+%p I took those ideas and coded them up:
+
+.syntax
+  %pre
+    =render 'lesson004e'
+
+%p I looked at the above syntax and added a tiny enhancement to the crutch_function/2 calls because the enhancement was obvious:
+
+.syntax
+  %pre
+    =render 'lesson004f'
+
+%p I looked at the above syntax and saw that I was blocked by this expression:
+
+.syntax
+  %pre
+    %code newcp = some-func(n, cumulative_prod) # I dont know yet
+
+%p I needed to to find the syntax for some-func().
+
+%p So, I played a what-if game with n.
+
+%p What-if n is 1?
+
+%p Then
+
+.syntax
+  %pre
+    %code crutch_function(n-1, newcp)
+
+%p should be 1 because I know fn1(1) should be 1 because factoral(1) is 1.
+
+%p Inside of crutch_function/2 I tried this expression for newcp:
+
+.syntax
+  %pre
+    %code
+      newcp = some-func(n, cumulative_prod)
+      is      some-func(1, cumulative_prod)
+      which might be 1
+
+%p Maybe, newcp is n * cumulative_prod
+
+%p I should try that.
+
+%p I wrote this:
+
+.syntax
+  %pre
+    =render 'lesson004g'
+
+
